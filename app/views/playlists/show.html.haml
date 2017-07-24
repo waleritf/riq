@@ -1,0 +1,7 @@
+%section.playlist-show
+  %header.playlist-show__header= "Playlist: #{@playlist.title}"
+  %section.playlist-show__content
+    - @playlist.tracks.each do |track|
+      .track
+        %span.track__title= track.title
+        %span.track__duration= "#{track.duration/60}:#{track.duration%60}"

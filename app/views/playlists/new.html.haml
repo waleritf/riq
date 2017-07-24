@@ -1,0 +1,5 @@
+%section.playlist-new
+  = form_for @playlist do |f|
+    = f.text_field :title
+    = select_tag 'tracks', options_from_collection_for_select(Track.all, :id, :title), multiple: true, size: 10
+    = f.submit 'Create'

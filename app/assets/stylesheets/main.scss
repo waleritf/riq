@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eeeeee;
+  font-family: 'Raleway', sans-serif;
+  color: #222222;
+}
+
+a, a:focus, a:visited {
+  text-decoration: none;
+  color: #000000;
+
+  &:hover {
+    color: #960018;
+  }
+}
+
+header.application-header {
+  height: 20%;
+  background-color: #dddddd;
+
+  .application-header-menu {
+    margin-bottom: 1%;
+    padding: 1%;
+    border-bottom: 1px solid #aaaaaa;
+
+    &__list-item {
+      padding: 1%;
+      &:hover {
+        background-color: #cccccc;
+      }
+    }
+  }
+}

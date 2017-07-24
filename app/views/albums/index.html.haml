@@ -1,0 +1,7 @@
+%section.albums-index
+  %header.albums-index__header
+  %section.albums-index__content
+    - @albums.each do |album|
+      .album
+        = link_to album.title, album_tracks_path(album), class: 'album__title'
+        .album__year= album.year

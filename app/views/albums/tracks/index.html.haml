@@ -1,0 +1,9 @@
+%section.tracks-index
+  %header.tracks-index__header
+    %h1 Tracks
+    = link_to 'Create track', new_track_path
+  %section.tracks-index__content
+    - @tracks.each do |track|
+      .track
+        .track__title= track.title
+        .track__duration= "#{track.duration/60}:#{track.duration%60}"

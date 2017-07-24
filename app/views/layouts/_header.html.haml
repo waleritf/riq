@@ -1,0 +1,12 @@
+%header.application-header
+  .application-header-menu
+    .application-header-menu__list
+      = link_to 'Playlists', playlists_path, class: 'application-header-menu__list-item'
+      = link_to 'Artists', artists_path, class: 'application-header-menu__list-item'
+      = link_to 'Albums',  albums_path, class: 'application-header-menu__list-item'
+      = link_to 'Tracks',  tracks_path, class: 'application-header-menu__list-item'
+  .playing-playlist
+    = form_tag on_air_playlist_path, method: :post, remote: true do
+      = select_tag 'playlist_id', options_from_collection_for_select(Playlist.all, :id, :title)
+      = submit_tag 'Play', disabled: (playlist_on_air.present?)
+    = link_to 'Stop transmission', on_air_playlist_path, method: :delete, remote: true, disabled: (playlist_on_air.nil?)

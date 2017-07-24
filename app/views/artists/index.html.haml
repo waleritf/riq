@@ -1,0 +1,7 @@
+%section.artists-index
+  %header.artists-index__header
+    %h1 Artists
+  %section.artists-index__content
+    - @artists.each do |artist|
+      .artist
+        = link_to artist.name, artist_albums_path(artist), class: 'artist__name'

@@ -1,0 +1,12 @@
+%section.playlists-index
+  %header.playlists-index__header
+    %h1 Playlists
+    = link_to 'Create playlist', new_playlist_path
+  %section.playlists-index__content
+    - @playlists.each do |playlist|
+      .playlist
+        %span= link_to playlist.title, playlist_path(playlist), class: 'playlist__title'
+        %span.playlist__tracks-count= playlist.tracks.count
+        %span.playlist__created-at= playlist.created_at
+        %span.playlist__updated-at= playlist.updated_at
+        %span= link_to 'Remove', playlist_path(playlist), method: :delete

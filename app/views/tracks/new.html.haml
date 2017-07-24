@@ -1,0 +1,4 @@
+%section.track-new
+  = form_for @track do |f|
+    = f.file_field :file
+    = f.submit 'Upload'
