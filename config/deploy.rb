@@ -10,12 +10,12 @@ require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
 
 set :application_name, 'riq'
 set :domain, '192.168.0.101'
-set :deploy_to, '/home/deploy/riq'
+set :deploy_to, '/home/riq/production'
 set :repository, 'git@github.com:wv0id/riq.git'
 set :branch, 'master'
 
 #Optional settings:
-set :user, 'deploy'          # Username in the server to SSH to.
+set :user, 'riq'          # Username in the server to SSH to.
 set :port, '22'           # SSH port number.
 set :forward_agent, true     # SSH forward_agent.
 
