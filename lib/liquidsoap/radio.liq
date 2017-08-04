@@ -51,24 +51,7 @@ def stop_transmission(~protocol,~data,~headers,uri) =
   http_response(code=200)
 end
 
-def get_meta(~protocol,~data,~headers,uri) =
-  log('Collecting meta...')
-
-  m = !meta
-  list.iter(source.shutdown, !transmissions)
-  update_meta(m)
-
-  log('Done!')
-  http_response(
-    protocol=protocol,
-    code=200,
-    headers=[("Content-Type","application/json; charset=utf-8")],
-    data=json_of(m)
-  )
-end
-
 harbor.http.register(port=8080, method='POST', '/set_playlist', set_playlist)
 harbor.http.register(port=8080, method='DELETE', '/stop_transmission', stop_transmission)
-harbor.http.register(port=8080, method='GET', '/get_meta', get_meta)
 
 output.dummy(blank())

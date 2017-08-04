@@ -7,6 +7,4 @@
       .playlist
         %span= link_to playlist.title, playlist_path(playlist), class: 'playlist__title'
         %span.playlist__tracks-count= playlist.tracks.count
-        %span.playlist__created-at= playlist.created_at
-        %span.playlist__updated-at= playlist.updated_at
         %span= link_to 'Remove', playlist_path(playlist), method: :delete

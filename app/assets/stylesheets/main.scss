@@ -3,9 +3,14 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 600px;
   background-color: #eeeeee;
   font-family: 'Raleway', sans-serif;
   color: #222222;
+}
+
+body > .content {
+  padding: 0 5%;
 }
 
 a, a:focus, a:visited {
@@ -20,11 +25,13 @@ a, a:focus, a:visited {
 header.application-header {
   height: 20%;
   background-color: #dddddd;
+  display: flex;
+  border-bottom: 1px solid #cccccc;
 
   .application-header-menu {
-    margin-bottom: 1%;
+    //margin-bottom: 1%;
     padding: 1%;
-    border-bottom: 1px solid #aaaaaa;
+    width: 50%;
 
     &__list-item {
       padding: 1%;
@@ -32,5 +39,9 @@ header.application-header {
         background-color: #cccccc;
       }
     }
+  }
+  .playing-playlist {
+    padding: 1%;
+    background-color: #cccccc;
   }
 }
