@@ -1,0 +1,11 @@
+set('log.file.path', '../../log/liquidsoap/radio.log')
+
+out = output.icecast(
+  %vorbis(quality = 0.4),
+  host = "localhost",
+  port = 8000,
+  password = "hackme",
+  mount = "radio.ogg",
+  fallible = true
+)
+

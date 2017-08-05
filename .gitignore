@@ -20,4 +20,7 @@
 
 /config/secrets.yml
 
-/public/uploads
+/public/uploads/*
+
+/lib/icecast2/icecast.xml
+/lib/liquidsoap/config.liq

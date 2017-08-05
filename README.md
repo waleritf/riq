@@ -6,7 +6,7 @@ Content management system for internet radio, based on rails, liquidsoap and ice
 ### liquidsoap
 Create file for logs
 
-    mkdir log/liquidsoap && touch log/liquidsoap/radio.liq &&
+    mkdir log/liquidsoap && touch log/liquidsoap/radio.liq
 
 
 Go to radio.liq and start server

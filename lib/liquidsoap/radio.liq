@@ -1,16 +1,7 @@
-set('log.file.path', '../../log/liquidsoap/radio.log')
+%include "config.liq"
 
 transmissions = ref []
 meta = ref []
-
-out = output.icecast(
-  %vorbis(quality = 0.4),
-  host = "localhost",
-  port = 8000,
-  password = "hackme",
-  mount = "radio.ogg",
-  fallible = true
-)
 
 def update_meta(m) =
   m = metadata.export(m)
