@@ -22,7 +22,7 @@ gem 'turbolinks', '~> 5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'carrierwave'
-gem 'dotenv'
+gem 'dotenv-rails'
 gem 'hamlit'
 gem 'taglib-ruby'
 gem 'mina'
