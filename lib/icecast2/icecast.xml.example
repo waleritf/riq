@@ -195,9 +195,9 @@
 
         <!-- Note that if <chroot> is turned on below, these paths must both
              be relative to the new root, not the original root -->
-        <logdir>/home/wv0id/workbanch/riq/log/icecast2</logdir>
-        <webroot>/home/wv0id/workbanch/riq/lib/icecast2/web</webroot>
-        <adminroot>/home/wv0id/workbanch/riq/lib/icecast2/admin</adminroot>
+        <logdir>/var/www/riq/shared/log/icecast2</logdir>
+        <webroot>/var/www/riq/shared/lib/icecast2/web</webroot>
+        <adminroot>/var/www/riq/shared/lib/icecast2/admin</adminroot>
         <!-- <pidfile>/usr/share/icecast2/icecast.pid</pidfile> -->
 
         <!-- Aliases: treat requests for 'source' path as being for 'dest' path

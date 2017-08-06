@@ -16,7 +16,7 @@ set :shared_dirs, fetch(:shared_dits, []).push('public/uploads', 'log')
 set :shared_files, fetch(:shared_files, []).push(
   '.env',
   'config/secrets.yml',
-  'lib/icecast2/icecast.yml',
+  'lib/icecast2/icecast.xml',
   'lib/liquidsoap/config.liq'
 )
 
@@ -32,7 +32,7 @@ task :setup do
   command %[touch "#{fetch(:shared_path)}/log/icecast2/error.log"]
   command %[touch "#{fetch(:shared_path)}/.env"]
   command %[touch "#{fetch(:shared_path)}/config/secrets.yml"]
-  command %[touch "#{fetch(:shared_path)}/lib/icecast2/icecast.yml"]
+  command %[touch "#{fetch(:shared_path)}/lib/icecast2/icecast.xml"]
   command %[touch "#{fetch(:shared_path)}/lib/liquidsoap/config.liq"]
 end
 
