@@ -5,19 +5,21 @@ require 'mina/rbenv'
 set :rails_env, 'production'
 set :application_name, 'riq'
 set :domain, '192.168.0.101'
-set :deploy_to, '/var/www/riq'
+set :deploy_to, '/home/deploy/apps/riq'
 set :repository, 'git@github.com:wv0id/riq.git'
 set :branch, 'master'
 set :user, 'deploy'
 set :port, '22'
-set :forward_agent, true     # SSH forward_agent.
+set :forward_agent, true # SSH forward_agent.
 
-set :shared_dirs, fetch(:shared_dits, []).push('public/uploads', 'log')
+set :shared_dirs, fetch(:shared_dirs, []).push('public/uploads', 'log', 'tmp')
 set :shared_files, fetch(:shared_files, []).push(
   '.env',
   'config/secrets.yml',
   'lib/icecast2/icecast.xml',
-  'lib/liquidsoap/config.liq'
+  'lib/liquidsoap/config.liq',
+  'tmp/sockets',
+  'tmp/pids'
 )
 
 task :environment do
