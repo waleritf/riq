@@ -58,3 +58,12 @@ task :deploy do
     end
   end
 end
+
+# TODO not work, permission
+# desc 'Restart puma service'
+# task :restart_services do
+#   command %[sudo systemctl restart puma.service]
+#   command %[systemctl restart icecast2.service]
+#   command %[systemctl restart liquidsoap.service]
+# end
+
