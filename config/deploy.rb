@@ -4,7 +4,7 @@ require 'mina/rbenv'
 
 set :rails_env, 'production'
 set :application_name, 'riq'
-set :domain, '192.168.0.101'
+set :domain, '192.168.0.105'
 set :deploy_to, '/home/deploy/apps/riq'
 set :repository, 'git@github.com:wv0id/riq.git'
 set :branch, 'master'
@@ -54,16 +54,17 @@ task :deploy do
       in_path(fetch(:current_path)) do
         command %{mkdir -p tmp/}
         command %{touch tmp/restart.txt}
+
+        invoke :restart_services
       end
     end
   end
 end
 
-# TODO not work, permission
-# desc 'Restart puma service'
-# task :restart_services do
-#   command %[sudo systemctl restart puma.service]
-#   command %[systemctl restart icecast2.service]
-#   command %[systemctl restart liquidsoap.service]
-# end
+desc 'Restart puma service'
+task :restart_services do
+  command %[sudo systemctl restart puma.service]
+  command %[sudo systemctl restart icecast2.service]
+  command %[sudo systemctl restart liquidsoap.service]
+end
 
