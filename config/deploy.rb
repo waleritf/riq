@@ -4,7 +4,7 @@ require 'mina/rbenv'
 
 set :rails_env, 'production'
 set :application_name, 'riq'
-set :domain, '192.168.0.105'
+set :domain, '178.62.215.181'
 set :deploy_to, '/home/deploy/apps/riq'
 set :repository, 'git@github.com:wv0id/riq.git'
 set :branch, 'master'
