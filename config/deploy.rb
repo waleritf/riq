@@ -16,6 +16,7 @@ set :shared_dirs, fetch(:shared_dirs, []).push('public/uploads', 'log', 'tmp')
 set :shared_files, fetch(:shared_files, []).push(
   '.env',
   'config/secrets.yml',
+  'config/database.yml',
   'lib/icecast2/icecast.xml',
   'lib/liquidsoap/config.liq',
   'tmp/sockets',
